@@ -550,7 +550,7 @@ def paste_raw(request, pk, paste, private_key=None):
                 paste.paste, mimetype='application/force-download')
         response['Content-Disposition'] = 'attachment; filename=%s' % filename
     else:
-        response = HttpResponse(paste.paste, mimetype='text/plain')
+        response = HttpResponse(paste.paste, mimetype='text/plain;charset=utf-8')
     return response
 
 
