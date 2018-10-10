@@ -14,6 +14,8 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
+HAYSTACK_SEARCH_RESULTS_PER_PAGE  =  10
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 USE_ICONS = False
 
@@ -134,7 +136,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'saic.urls'
-ROOTDIR = os.path.abspath(os.path.dirname(__file__)) 
+ROOTDIR = os.path.abspath(os.path.dirname(__file__))
 
 TEMPLATE_DIRS = (
         os.sep.join([ROOTDIR, 'templates']),

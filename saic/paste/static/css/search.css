@@ -21,3 +21,7 @@ div.search-submit {
     clear: both;
     margin-left: 20px;
 }
+
+span.highlighted {
+  color: red;
+}
