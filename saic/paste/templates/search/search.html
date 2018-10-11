@@ -21,7 +21,6 @@
       {% load highlight %}
       {% for result in page.object_list %}
 
-
 <!--       <li>
         {{ result.paste }} -
         {{ result.object.filename }} -
@@ -40,6 +39,14 @@
             <br>
             {% highlight result.object.paste with query %}
           </li>
+        {% endif %}
+
+        {% if result.content_type == "paste.set" %}
+        <li>
+          <a href='{% url "paste_view" pk=result.object.pk %}'>
+            {% highlight result.object.description with query %}
+          </a>
+        </li>
         {% endif %}
 
       {% empty %}
